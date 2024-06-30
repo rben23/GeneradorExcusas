@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* --- */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* --- */
+
+/* - CONTAINER - */
+#container {
+  min-height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  gap: 3rem;
+  
+  background-image: linear-gradient(45deg, rgb(77, 57, 254), rgb(71, 30, 134));
+}
+
+/* - INICIO - */
+#container>div:first-of-type {
+  width: 45rem;
+  height: 20rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  
+  border: solid white .2rem;
+  border-radius: .5rem;
+  
+  backdrop-filter: blur(10px);
+  background-color: rgba(31, 29, 29, 0.73);
+  
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
+}
+
+/* Inicio > Titulo */
+#container>div:first-of-type>h1 {
+  font-size: 2.5rem;
+  
+  color: white;
+  
+  text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
+}
+
+/* Inicio > activación */
+#container>div:first-of-type>img {
+  width: 7rem;
+  
+  cursor: pointer;
+  
+  filter: drop-shadow(0 0 .5rem rgba(0, 0, 0, 0.73));
+  transition: transform 300ms ease-in-out;
+}
+
+#container>div:first-of-type>img:hover {
+  transform: rotateZ(3deg);
+  filter: drop-shadow(0 0 .6rem rgba(81, 31, 0, 0.753));
+}
+
+#container>div:first-of-type>img:active {
+  filter: drop-shadow(0 0 .7rem rgba(255, 0, 0, 0.700));
+}
+
+/* - EXCUSAS - */
+#container>div:nth-of-type(2) {
+  min-width: 50rem;
+  max-width: 80rem;
+  height: 15rem;
+  
+  padding: .5rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  border: solid white .2rem;
+  border-radius: .5rem;
+  
+  backdrop-filter: blur(10px);
+  background-color: rgba(31, 29, 29, 0.73);
+  
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
+}
+
+/* Excusas > texto */
+#container>div:nth-of-type(2)>h2 {
+  padding: .5rem;
+  font-size: 2rem;
+  text-align: center;
+
+  color: white;
+
+  text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
+}
+
+/* --- */
