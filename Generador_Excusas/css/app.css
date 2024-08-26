@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Amsterdam";
+  src: url("../fonts/NewAmsterdam-Regular.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: "Josefin";
+  src: url("../fonts/JosefinSans-VariableFont_wght.ttf") format("truetype")
+}
+
 *,
 *::before,
 *::after {
@@ -14,7 +24,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Amsterdam', sans-serif;
 }
 
 /* --- */
@@ -22,96 +32,183 @@ body {
 /* - CONTAINER - */
 #container {
   min-height: 100vh;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  
+  justify-content: space-between;
+
   gap: 3rem;
-  
-  background-image: linear-gradient(45deg, rgb(77, 57, 254), rgb(71, 30, 134));
+
+  color: #2A2E30;
+
+  background-image: url(../img/woodboard.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* - INICIO - */
 #container>div:first-of-type {
-  width: 45rem;
-  height: 20rem;
-  
+  width: 28rem;
+  height: 12rem;
+  padding: 1rem;
+
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
-  
-  border: solid white .2rem;
-  border-radius: .5rem;
-  
-  backdrop-filter: blur(10px);
-  background-color: rgba(31, 29, 29, 0.73);
-  
+
+  background-image: url(../img/note.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
   box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
 }
 
-/* Inicio > Titulo */
-#container>div:first-of-type>h1 {
-  font-size: 2.5rem;
-  
-  color: white;
-  
-  text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
-}
-
-/* Inicio > activación */
+/* Inicio > imagen */
 #container>div:first-of-type>img {
   width: 7rem;
-  
-  cursor: pointer;
-  
-  filter: drop-shadow(0 0 .5rem rgba(0, 0, 0, 0.73));
-  transition: transform 300ms ease-in-out;
+
+  filter: drop-shadow(0 0 .5rem rgba(0, 0, 0, 0.2));
 }
 
-#container>div:first-of-type>img:hover {
-  transform: rotateZ(3deg);
-  filter: drop-shadow(0 0 .6rem rgba(81, 31, 0, 0.753));
+/* Inicio > titulo */
+#container>div:first-of-type>h1 {
+  font-size: 3rem;
 }
 
-#container>div:first-of-type>img:active {
-  filter: drop-shadow(0 0 .7rem rgba(255, 0, 0, 0.700));
-}
-
-/* - EXCUSAS - */
-#container>div:nth-of-type(2) {
-  min-width: 50rem;
-  max-width: 80rem;
-  height: 15rem;
-  
+/* - AUTOR - */
+#container>a {
+  width: 11rem;
+  height: 4rem;
   padding: .5rem;
-  
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+
+  font-family: 'Josefin', 'Amsterdam', sans-serif;
+  text-decoration: none;
+  color: black;
+
+  background-image: url(../img/note.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
+}
+
+/* Autor > logo */
+#container>a>img {
+  width: 3.5rem;
+}
+
+/* Autor > info */
+#container>a>div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Autor > info > nom User */
+#container>a>div>h4 {
+  font-size: 1.5rem;
+}
+
+/* Autor > info > nombre */
+#container>a>div>p {
+  font-size: .75rem;
+}
+
+/* - CONTENIDO - */
+#container>div:nth-of-type(2) {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  gap: 2.5rem;
+}
+
+/* - GENERAR EXCUSA - */
+#container>div:nth-of-type(2)>div:first-of-type {
+  width: 15rem;
+  height: 28rem;
+  padding: 1rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
-  border: solid white .2rem;
-  border-radius: .5rem;
-  
-  backdrop-filter: blur(10px);
-  background-color: rgba(31, 29, 29, 0.73);
-  
+  gap: 1rem;
+
+  background-image: url(../img/note.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
+}
+
+/* Generar Excusas > texto */
+#container>div:nth-of-type(2)>div:first-of-type>h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* Generar Excusas > flecha */
+#container>div:nth-of-type(2)>div:first-of-type>p {
+  font-size: 4rem;
+}
+
+/* Generar Excusas > imagen */
+#container>div:nth-of-type(2)>div:first-of-type>img {
+  width: 8rem;
+
+  cursor: pointer;
+
+  filter: drop-shadow(0 0 .5rem rgba(0, 0, 0, 0.2));
+
+  transition: transform 300ms ease-in-out;
+}
+
+#container>div:nth-of-type(2)>div:first-of-type>img:hover {
+  transform: rotateZ(180deg);
+  filter: drop-shadow(0 0 .5rem rgba(0, 0, 0, 0.4));
+}
+
+#container>div:nth-of-type(2)>div:first-of-type>img:active {
+  filter: drop-shadow(0 0 .5rem rgba(255, 0, 0, 0.6));
+}
+
+/* - EXCUSAS - */
+#container>div:nth-of-type(2)>div:nth-of-type(2) {
+  width: 60rem;
+  height: 28rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background-image: url(../img/note.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
   box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
 }
 
 /* Excusas > texto */
-#container>div:nth-of-type(2)>h2 {
-  padding: .5rem;
-  font-size: 2rem;
+#container>div:nth-of-type(2)>div:nth-of-type(2)>h3 {
+  font-size: 4rem;
   text-align: center;
-
-  color: white;
-
-  text-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
 }
 
 /* --- */
