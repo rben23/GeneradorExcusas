@@ -1,20 +1,22 @@
 var cul = [
   "Mi perro", "El caballo Horse Luis", "El niño de la esquina",
-  "Mi gato", "Poseidón", "Mi Hermano", "La vecina", "Mi tio Paco",
-  "Mi primito Julio", "El compañero de al lado", "La amiga de mi primo"
+  "Mi gato", "Poseidón", "Mi Hermano", "La vecina", "El vecino", "Mi tio Paco",
+  "Mi primito Julio", "El compañero de al lado", "La amiga de mi primo",
+  "El portero", "El granjero"
 ];
 
 var acc = [
-  "se ha comido", "ha volado por los aires",
-  "ha incendiado", "ha vomitado", "ha estropeado", "le ha pegado un cañonazo a",
+  "se ha comido", "ha volado por los aires", "ha incendiado", "ha vomitado",
+  "ha estropeado", "le ha pegado un cañonazo a",
   "le ha dado a una paloma mensajera del lejano oeste", "ha enviado al Polo Norte",
-  "ha cambiado"
+  "ha cambiado", "ha escupido", "ha perdido"
 ];
 
 var res = [
   "mi disco duro", "el ordenador", "mis apuntes",
   "los deberes", "la documentación", "a mi pez", "mi mochila", "a mi primo Pedro",
-  "mi casa", "mi monitor", "el programa", "a mi canario"
+  "mi casa", "mi monitor", "el programa", "a mi canario", "mi habitación", "la PS5", 
+  "la lampara", "mi calculadora", "mi libreta", "mi estuche"
 ];
 
 var btnGen = document.getElementById("gen");
