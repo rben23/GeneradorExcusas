@@ -25,6 +25,8 @@ html {
 
 body {
   font-family: 'Amsterdam', sans-serif;
+
+  overflow: hidden;
 }
 
 /* --- */
@@ -36,9 +38,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
 
-  gap: 3rem;
+  gap: 1rem;
 
   color: #2A2E30;
 
@@ -49,97 +51,74 @@ body {
 
 /* - INICIO - */
 #container>div:first-of-type {
-  width: 28rem;
-  height: 12rem;
+  width: 100%;
+  height: 5rem;
+
   padding: 1rem;
+
+  position: absolute;
+  top: 0;
 
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
 
   background-image: url(../img/note.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
 
   box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
 }
 
 /* Inicio > imagen */
 #container>div:first-of-type>img {
-  width: 7rem;
+  width: 3rem;
 
   filter: drop-shadow(0 0 .5rem rgba(0, 0, 0, 0.2));
 }
 
+/* Inicio > div */
+#container>div:first-of-type>div {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: .5rem;
+}
+
 /* Inicio > titulo */
-#container>div:first-of-type>h1 {
-  font-size: 3rem;
+#container>div:first-of-type>div>h1 {
+  font-size: 2rem;
 }
 
-/* - AUTOR - */
-#container>a {
-  width: 11rem;
-  height: 4rem;
-  padding: .5rem;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  gap: 1rem;
-
+/* Inicio > autor */
+#container>div:first-of-type>div>a {
   font-family: 'Josefin', 'Amsterdam', sans-serif;
+
+  font-size: 1rem;
+  font-weight: bold;
   text-decoration: none;
-  color: black;
-
-  background-image: url(../img/note.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
-}
-
-/* Autor > logo */
-#container>a>img {
-  width: 3.5rem;
-}
-
-/* Autor > info */
-#container>a>div {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Autor > info > nom User */
-#container>a>div>h4 {
-  font-size: 1.5rem;
-}
-
-/* Autor > info > nombre */
-#container>a>div>p {
-  font-size: .75rem;
+  color: #2A2E30;
 }
 
 /* - CONTENIDO - */
 #container>div:nth-of-type(2) {
   width: 100%;
+  height: 65vh;
 
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: end;
+  justify-content: space-between;
+  align-items: center;
   gap: 2.5rem;
 }
 
 /* - GENERAR EXCUSA - */
 #container>div:nth-of-type(2)>div:first-of-type {
-  width: 15rem;
-  height: 28rem;
+  width: 20%;
+  height: 100%;
   padding: 1rem;
 
   display: flex;
@@ -188,8 +167,8 @@ body {
 
 /* - EXCUSAS - */
 #container>div:nth-of-type(2)>div:nth-of-type(2) {
-  width: 60rem;
-  height: 28rem;
+  width: 100%;
+  height: 100%;
   padding: 1rem;
 
   display: flex;
@@ -209,6 +188,119 @@ body {
 #container>div:nth-of-type(2)>div:nth-of-type(2)>h3 {
   font-size: 4rem;
   text-align: center;
+}
+
+/* - AJUSTES - */
+/* Ajustes > 855px */
+@media (max-width: 855px) {
+
+  /* Ajustes > contenido */
+  #container>div:nth-of-type(2) {
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+  }
+
+  /* Ajustes > generar excusa */
+  #container>div:nth-of-type(2)>div:first-of-type {
+    width: 100%;
+    height: 30%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* Ajustes > generar excusas > texto */
+  #container>div:nth-of-type(2)>div:first-of-type>h2 {
+    font-size: 3rem;
+  }
+
+  /* Ajustes > generar excusas > flecha */
+  #container>div:nth-of-type(2)>div:first-of-type>p {
+    font-size: 4rem;
+    transform: rotateZ(270deg);
+  }
+
+  /* Ajustes > generar excusas > imagen */
+  #container>div:nth-of-type(2)>div:first-of-type>img {
+    width: 6rem;
+  }
+
+  /* Ajustes > excusas > texto */
+  #container>div:nth-of-type(2)>div:nth-of-type(2)>h3 {
+    font-size: 3rem;
+  }
+}
+
+/* Ajustes > 495px */
+@media (max-width: 495px) {
+
+  /* Ajustes > inicio > div */
+  #container>div:first-of-type>div>a {
+    display: none;
+  }
+
+  /* Ajustes > inicio > div */
+  #container>div:first-of-type>div>h1 {
+    font-size: 2rem;
+  }
+
+
+  /* Ajustes > generar excusa */
+  #container>div:nth-of-type(2)>div:first-of-type {
+    width: 100%;
+    height: 30%;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+
+    background-image: url(../img/note.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.73);
+  }
+
+  /* Ajustes > generar excusas > flecha */
+  #container>div:nth-of-type(2)>div:first-of-type>p {
+    display: none;
+  }
+
+  /* Ajustes > excusas > texto */
+  #container>div:nth-of-type(2)>div:nth-of-type(2)>h3 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Ajustes > 345px */
+@media (max-width: 345px) {
+
+  /* Ajustes > inicio > div */
+  #container>div:first-of-type>div>h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Ajustes > generar excusas > texto */
+  #container>div:nth-of-type(2)>div:first-of-type>h2 {
+    display: none;
+  }
+
+  /* Ajustes > excusas > texto */
+  #container>div:nth-of-type(2)>div:nth-of-type(2)>h3 {
+    font-size: 2rem;
+  }
 }
 
 /* --- */
